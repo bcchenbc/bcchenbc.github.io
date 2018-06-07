@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 May 2018 18:13:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add a thin provisioned logical volume to rescue a fulled Proxmox lab</title>
+      <link>http://example.org/blogger/add-a-thin-provisioned-logical-volume-to-rescue-a-fulled-proxmox-lab/</link>
+      <pubDate>Thu, 03 May 2018 18:13:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/add-a-thin-provisioned-logical-volume-to-rescue-a-fulled-proxmox-lab/</guid>
+      <description>It&amp;rsquo;s a great &amp;amp; it&amp;rsquo;s so efficient to have VM running on thin provisioned disks. However, I just learnt that Proxmox will quietly put a VM into some stalled status (web GUI shows a darkened icon but without green triangle, and the console will not respond) if the volume is fulled. Having Proxmox to reset or to boot with a .iso is possible, but sooner or later, all will hit the wall again.</description>
+    </item>
+    
+    <item>
+      <title>Installing CUDA for deep learning while having IGP for display</title>
+      <link>http://example.org/blogger/installing-cuda-for-deep-learning-while-having-igp-for-display/</link>
+      <pubDate>Thu, 03 May 2018 17:17:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/installing-cuda-for-deep-learning-while-having-igp-for-display/</guid>
+      <description>Note for installing CUDA for deep learning, while keeping the integrated graphic processor handling display.
+(Tested on Debian Stretch 9.3)
+Credit goes to:
+https://unix.stackexchange.com/questions/218163/how-to-install-cuda- toolkit-7-8-9-on-debian-8-jessie-or-9-stretch 
+1. Download CUDA installation runfile.
+(cuda_9.1.85_387.26_linux.run in my case)
+(This may take a while, 1.6GB)
+2. Install requirements
+sudo apt-get install linux-source sudo apt-get source linux-image-$(uname -r) sudo apt-get install linux-headers-$(uname -r) sudo apt-get install gcc g++ libxi-dev libglu1-mesa libglu1-mesa-dev libxmuu-dev linux-headers-amd64 linux- source</description>
+    </item>
+    
+    <item>
+      <title>Joining Active Directory</title>
+      <link>http://example.org/blogger/joining-active-directory/</link>
+      <pubDate>Fri, 22 Dec 2017 02:29:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/joining-active-directory/</guid>
+      <description>Test on freshly installed Debian 9.
+Credit goes: https://www.tecmint.com/integrate-ubuntu-to-samba4-ad-dc-with- sssd-and-realm/
+Make sure the hostname has been updated. (hostnamectl set-hostname newhostname).
+apt install adcli realmd sssd sssd-tools packagekit policykit-1 apt install samba-common-bin samba-libs samba-dsdb-modules apt install krb5-user Join the &amp;ldquo;the.domain.name&amp;rdquo; domain:
+realm join the.domain.name
+Update /etc/sssd/sssd.conf: (Optional)
+(I prefer to have use_fully_qualified_names = False and customize fallback_homedir)
+(Also, default_shell = /usr/bin/zsh for me. ) [sssd] domains = the.domain.name config_file_version = 2 services = nss, pam [domain/the.</description>
+    </item>
+    
+    <item>
+      <title>Active Directory with Samba 4 Domain Controller on Raspberry Pi</title>
+      <link>http://example.org/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/</link>
+      <pubDate>Thu, 17 Aug 2017 19:44:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/</guid>
+      <description>This is just a collection of tutorials for a home network experiment.
+The goal is to setup a small Active Directory domain to ease account management and local sharings.
+The Domain Controller will be based on Samba 4 running on a Raspberry Pi. I&amp;rsquo;ll have my other machines: several Windows, a few Debians, a Synology NAS, and potentially Mac OS X joining the domain.
+Setting up Active Directory (EDIT: Eventually, I found this guide.</description>
+    </item>
+    
+    <item>
+      <title>python3 twitter downloader with mongodb</title>
+      <link>http://example.org/blogger/python3-twitter-downloader-with-mongodb/</link>
+      <pubDate>Thu, 26 Nov 2015 16:12:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/python3-twitter-downloader-with-mongodb/</guid>
+      <description>mongodb credit goes to Liam Bowen (original post: http://hut8.io/posts/mongodb-3-on-debian-jessie/) 1. install mongodb 3.0
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10 echo &#39;deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.0 main&#39; | sudo tee &#39;/etc/apt/sources.list.d/mongodb-org-3.0.list&#39; sudo apt-get update sudo apt-get install -y mongodb-org  2. tweak the settings
+sudo mkdir /mongodb sudo chown -R admin:admin /mongodb # &amp;quot;admin&amp;quot; because of using AWS debian AMI sudo nano /etc/mongod.conf # change [storage.dbPath] and [systemLog.path], &amp;quot;wiredTiger&amp;quot; part is more optional  3.</description>
+    </item>
+    
+    <item>
+      <title>Disable date/time sync between VirtualBox client and host</title>
+      <link>http://example.org/blogger/disable-datetime-sync-between-virtualbox-client-and-host/</link>
+      <pubDate>Mon, 21 Sep 2015 01:26:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/disable-datetime-sync-between-virtualbox-client-and-host/</guid>
+      <description>by msa.operation @ forum.virtualbox.org
+original post: https://forums.virtualbox.org/viewtopic.php?t=8535
+vboxmanage setextradata [VMname] &amp;quot;VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled&amp;quot; &amp;quot;1&amp;quot;  Note: replace [VMname] with the name of target virtual machine; replace &amp;ldquo;1&amp;rdquo; with &amp;ldquo;0&amp;rdquo; to turn the sync back on.</description>
+    </item>
+    
+    <item>
+      <title>connect to local area network through PPTP VPN (Synology DSM)</title>
+      <link>http://example.org/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/</link>
+      <pubDate>Tue, 28 Jul 2015 03:55:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/</guid>
+      <description>Credit goes to this forum post by vibrati onbaby
+In short, assign PPTP managed IPs into the same pool of local private network.
+ login as root through SSH. go to /usr/syno/etc/packages/VPNCenter/pptp edit the two lines for localip and remoteip pptp.conf. (@vibrationbaby provided the setting below. i used .200 and .201-205 while my DHCP managed 100-199. just choose some addresses that is not overlapping with existing DHCP pool.)
+localip 192.168.1.210  remoteip 192.</description>
+    </item>
+    
+    <item>
+      <title>add Dynu.com to DDNS list on Synology NAS</title>
+      <link>http://example.org/blogger/add-dynu.com-to-ddns-list-on-synology-nas/</link>
+      <pubDate>Tue, 28 Jul 2015 00:59:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/add-dynu.com-to-ddns-list-on-synology-nas/</guid>
+      <description>https://www.dynu.com/DynamicDNS/IPUpdateClient/SynologyNAS
+(install ipkg to install nano follow the instructions here if necessary)
+(Note: on my DSM 5.2, PATH setting in /root/.profile need to be commented out)
+add below codes to /etc.defaults/ddns_provider.conf
+[Dynu.com] modulepath=DynDNS queryurl=api.dynu.com/nic/update?hostname=__HOSTNAME__&amp;amp;username=__USERNAME__&amp;amp;myip=__MYIP__&amp;amp;password=__PASSWORD__  </description>
+    </item>
+    
+    <item>
+      <title>a new Mint 17</title>
+      <link>http://example.org/blogger/a-new-mint-17/</link>
+      <pubDate>Fri, 19 Jun 2015 18:02:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/a-new-mint-17/</guid>
+      <description>Software Manager
+ ScreenShot, Gpaste 2, Sticky Notes, Screensaver Inhibitor, Timer w Notification edit fstab sudo blkid # for UUID
+sudo gedit /etc/fstab
+ packages&amp;hellip; wget https://gist.githubusercontent.com/bcchenbc/cd97144714a89d6dd69e/raw/aaaac1e2f76fcbcf44137f9acece357d7214bb00/install_packages.sh
+chmod +x install_packages.sh
+./install_packages.sh
+ zsh curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+ZSH_THEME=&amp;ldquo;jreese&amp;rdquo; in .zshrc nano .zshrc
+chsh -s /bin/zsh
+ latex
+http://www.tug.org/texlive/quickinstall.html http://mirror.ctan.org/systems/texlive/Images/ sudo furiusisomount
+mount texlive iso file ./install-tl
+add &amp;ldquo;/usr/local/texlive/2015/bin/x86_64-linux&amp;rdquo; to PATH JRE
+https://sites.google.com/site/easylinuxtipsproject/java#TOC-Install-JRE-64-bit- https://java.com/en/download/linux_manual.jsp sudo mkdir -p -v /opt/java/64</description>
+    </item>
+    
+    <item>
+      <title>Add code blocks to Blogger</title>
+      <link>http://example.org/blogger/add-code-blocks-to-blogger/</link>
+      <pubDate>Wed, 17 Jun 2015 18:26:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/add-code-blocks-to-blogger/</guid>
+      <description>Credit goes to: http://shanhua0131.blogspot.com/2014/01/code.html
+Reference: 1. Use [Edit HTML] in &amp;ldquo;Template&amp;rdquo; to add following line into the header.
+2. Then, go &amp;ldquo;Template&amp;rdquo;, [Customize], [Advanced], [Add CSS] to paste following codes, and click [Apply to Blog]
+.post .prettyprint { display: block; /* fixes a strange ie margin bug */ font-family: Courier New; font-size: 10pt; overflow:auto; background: #f0f0f0 url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAASwCAYAAAAt7rCDAAAABHNCSVQICAgIfAhkiAAAAQJJREFUeJzt0kEKhDAMBdA4zFmbM+W0upqFOhXrDILwsimFR5pfMrXW5jhZr7PwRlxVX8//jNHrGhExjXzdu9c5IiIz+7iqVmB7Hwp4OMa2nhhwN/PRGEMBh3Zjt6KfpzPztxW9MSAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzAMwzB8HS+J9kUTvzEDMwAAAABJRU5ErkJggg==) left top repeat-y; border: 1px solid #ccc; padding: 10px 10px 10px 21px; max-height:200px; line-height: 1.</description>
+    </item>
+    
+    <item>
+      <title>install python pip on linux without root</title>
+      <link>http://example.org/blogger/install-python-pip-on-linux-without-root/</link>
+      <pubDate>Mon, 09 Feb 2015 22:25:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/install-python-pip-on-linux-without-root/</guid>
+      <description>While trying to run python on Karst, i was (not) surprised that the new server does not come with numpy/pandas, but again amazed by that having no pip available. While i did make the pip works on Quarry (the retired server), I cannot really follow the old process, since I don&amp;rsquo;t really remember how&amp;hellip;. The issue seems to be that to install pip, easy_install is necessary&amp;hellip; Anyway, thanks Evgeny for the post in askbot.</description>
+    </item>
+    
+    <item>
+      <title>testing2</title>
+      <link>http://example.org/blogger/testing2/</link>
+      <pubDate>Thu, 29 Jan 2015 23:57:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/testing2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>新手上路</title>
+      <link>http://example.org/blogger/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF/</link>
+      <pubDate>Thu, 29 Jan 2015 22:45:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF/</guid>
+      <description>測試一
+@chenboc 發送的推文</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on My New Hugo Site</title>
+    <link>http://example.org/tags/network/</link>
+    <description>Recent content in Network on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Aug 2017 19:44:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Active Directory with Samba 4 Domain Controller on Raspberry Pi</title>
+      <link>http://example.org/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/</link>
+      <pubDate>Thu, 17 Aug 2017 19:44:00 +0000</pubDate>
+      
+      <guid>http://example.org/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/</guid>
+      <description>This is just a collection of tutorials for a home network experiment.
+The goal is to setup a small Active Directory domain to ease account management and local sharings.
+The Domain Controller will be based on Samba 4 running on a Raspberry Pi. I&amp;rsquo;ll have my other machines: several Windows, a few Debians, a Synology NAS, and potentially Mac OS X joining the domain.
+Setting up Active Directory (EDIT: Eventually, I found this guide.</description>
+    </item>
+    
+  </channel>
+</rss>
