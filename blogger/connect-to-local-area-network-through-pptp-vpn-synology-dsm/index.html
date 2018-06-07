@@ -1,206 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My New Hugo Site</title>
-    
-      <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.41" />
-<title>connect to local area network through PPTP VPN (Synology DSM) :: My New Hugo Site</title>
-<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-<link href="/css/font-awesome.min.css" rel="stylesheet">
-<link href="/css/nucleus.css" rel="stylesheet">
-<link href="/theme-flex/style.css" rel="stylesheet">
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>connect to local area network through PPTP VPN (Synology DSM) - My New Hugo Site</title>
+  <meta property="og:title" content="connect to local area network through PPTP VPN (Synology DSM) - My New Hugo Site" />
+  <meta name="twitter:title" content="connect to local area network through PPTP VPN (Synology DSM) - My New …" />
+  <meta name="description" content="Credit goes to this forum post by vibrati onbaby
+In short, assign PPTP managed IPs into the same pool of local private network.
+ login as root through SSH. go to /usr/syno/etc/packages/VPNCenter/pptp edit the two lines for localip and remoteip pptp.conf. (@vibrationbaby provided the setting below. i used .200 and .201-205 while my DHCP managed 100-199. just choose some addresses that is not overlapping with existing DHCP pool.)
+localip 192.168.1.210  remoteip 192.">
+  <meta property="og:description" content="Credit goes to this forum post by vibrati onbaby
+In short, assign PPTP managed IPs into the same pool of local private network.
+ login as root through SSH. go to /usr/syno/etc/packages/VPNCenter/pptp edit the two lines for localip and remoteip pptp.conf. (@vibrationbaby provided the setting below. i used .200 and .201-205 while my DHCP managed 100-199. just choose some addresses that is not overlapping with existing DHCP pool.)
+localip 192.168.1.210  remoteip 192.">
+  <meta name="twitter:description" content="Credit goes to this forum post by vibrati onbaby
+In short, assign PPTP managed IPs into the same pool of local private network.
+ login as root through SSH. go to /usr/syno/etc/packages/VPNCenter/pptp …">
+  <meta name="author" content=""/>
+  <meta property="og:site_name" content="My New Hugo Site" />
+  <meta property="og:url" content="/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.41" />
+  <link rel="stylesheet" href="/css/style.css" media="all" />
+  <link rel="stylesheet" href="/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="/css/custom.css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
 
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<script src="/js/jquery-2.x.min.js"></script>
-<script type="text/javascript">
-      var baseurl = "http:\/\/example.org\/";
-</script>
-<meta name="description" content="">
+<body>
 
-
-
-    
-  </head>
-  <body data-url="/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/">
-    
-      <header>
-  <div class="logo">
-    
-	
-  
-    <a class="baselink" href="http://example.org/">My New Hugo Site</a>
-  
-
-  </div>
-  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
-</header>
-<article>
-  <aside>
-    <ul class="menu">
-          <li data-nav-id="/" class="dd-item">
-          <a href="/">
-            <i class="fa fa-fw fa-home"></i>
-          </a>
-          </li>
-    <li data-nav-id="/blogger/" class="dd-item parent haschildren
-        ">
-      <div>
-      <a href="/blogger/">Bloggers</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/blogger/add-a-thin-provisioned-logical-volume-to-rescue-a-fulled-proxmox-lab/" class="dd-item">
-        <div>
-          <a href="/blogger/add-a-thin-provisioned-logical-volume-to-rescue-a-fulled-proxmox-lab/">
-            Add a thin provisioned logical volume to rescue a fulled Proxmox lab
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/installing-cuda-for-deep-learning-while-having-igp-for-display/" class="dd-item">
-        <div>
-          <a href="/blogger/installing-cuda-for-deep-learning-while-having-igp-for-display/">
-            Installing CUDA for deep learning while having IGP for display
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/joining-active-directory/" class="dd-item">
-        <div>
-          <a href="/blogger/joining-active-directory/">
-            Joining Active Directory
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/" class="dd-item">
-        <div>
-          <a href="/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/">
-            Active Directory with Samba 4 Domain Controller on Raspberry Pi
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/python3-twitter-downloader-with-mongodb/" class="dd-item">
-        <div>
-          <a href="/blogger/python3-twitter-downloader-with-mongodb/">
-            python3 twitter downloader with mongodb
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/disable-datetime-sync-between-virtualbox-client-and-host/" class="dd-item">
-        <div>
-          <a href="/blogger/disable-datetime-sync-between-virtualbox-client-and-host/">
-            Disable date/time sync between VirtualBox client and host
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/" class="dd-item active">
-        <div>
-          <a href="/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/">
-            connect to local area network through PPTP VPN (Synology DSM)
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/add-dynu.com-to-ddns-list-on-synology-nas/" class="dd-item">
-        <div>
-          <a href="/blogger/add-dynu.com-to-ddns-list-on-synology-nas/">
-            add Dynu.com to DDNS list on Synology NAS
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/a-new-mint-17/" class="dd-item">
-        <div>
-          <a href="/blogger/a-new-mint-17/">
-            a new Mint 17
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/add-code-blocks-to-blogger/" class="dd-item">
-        <div>
-          <a href="/blogger/add-code-blocks-to-blogger/">
-            Add code blocks to Blogger
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/install-python-pip-on-linux-without-root/" class="dd-item">
-        <div>
-          <a href="/blogger/install-python-pip-on-linux-without-root/">
-            install python pip on linux without root
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/testing2/" class="dd-item">
-        <div>
-          <a href="/blogger/testing2/">
-            testing2
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/blogger/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF/" class="dd-item">
-        <div>
-          <a href="/blogger/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF/">
-            新手上路
-          </a>
-        </div>
-    </li>
-        </ul>
-    </li>
-
-
-
-
+<header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="/">My New Hugo Site</a></h1>
+    <ul class="site-navi-items">
     </ul>
-    <section>
-    </section>
-  </aside>
-  <section class="page">
-    
-    <div class="nav-select">
-      <center>Navigation : 
-        <select onchange="javascript:location.href = this.value;">
-          
-    <option value="/blogger/" >
-   Bloggers</option> 
-      <option value="/blogger/add-a-thin-provisioned-logical-volume-to-rescue-a-fulled-proxmox-lab/" >- Add a thin provisioned logical volume to rescue a fulled Proxmox lab</option>
-      <option value="/blogger/installing-cuda-for-deep-learning-while-having-igp-for-display/" >- Installing CUDA for deep learning while having IGP for display</option>
-      <option value="/blogger/joining-active-directory/" >- Joining Active Directory</option>
-      <option value="/blogger/active-directory-with-samba-4-domain-controller-on-raspberry-pi/" >- Active Directory with Samba 4 Domain Controller on Raspberry Pi</option>
-      <option value="/blogger/python3-twitter-downloader-with-mongodb/" >- python3 twitter downloader with mongodb</option>
-      <option value="/blogger/disable-datetime-sync-between-virtualbox-client-and-host/" >- Disable date/time sync between VirtualBox client and host</option>
-      <option value="/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/"  selected>- connect to local area network through PPTP VPN (Synology DSM)</option>
-      <option value="/blogger/add-dynu.com-to-ddns-list-on-synology-nas/" >- add Dynu.com to DDNS list on Synology NAS</option>
-      <option value="/blogger/a-new-mint-17/" >- a new Mint 17</option>
-      <option value="/blogger/add-code-blocks-to-blogger/" >- Add code blocks to Blogger</option>
-      <option value="/blogger/install-python-pip-on-linux-without-root/" >- install python pip on linux without root</option>
-      <option value="/blogger/testing2/" >- testing2</option>
-      <option value="/blogger/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF/" >- 新手上路</option>
-  
+  </nav>
+</header>
+<hr class="site-header-bottom">
 
-
-
-        </select>
-      </center>
-    </div>
-      <div>
-        <div class="searchbox">
-          <input data-search-input id="search-by" type="text" placeholder="Search...">
-        </div>
-        <script type="text/javascript" src="/js/lunr.min.js"></script>
-        <script type="text/javascript" src="/js/auto-complete.js"></script>
-        <link href="/css/auto-complete.css" rel="stylesheet">
-        <script type="text/javascript">
-          
-              var baseurl = "http:\/\/example.org\/";
-          
-        </script>
-        <script type="text/javascript" src="/js/search.js"></script>
-      </div>
-    
-
-    <h1>connect to local area network through PPTP VPN (Synology DSM)</h1>
-    
-    
-    
-    <p>Credit goes to <a href="http://forum.synology.com/enu/viewtopic.php?f=173&amp;t=96351">this forum
+  <div class="main" role="main">
+    <article class="article">
+      
+      
+      <h1 class="article-title">connect to local area network through PPTP VPN (Synology DSM)</h1>
+      
+      <hr class="article-title-bottom">
+      <ul class="article-meta">
+        <li class="article-meta-date"><time>July 28, 2015</time></li>
+      </ul>
+      
+      <p>Credit goes to <a href="http://forum.synology.com/enu/viewtopic.php?f=173&amp;t=96351">this forum
 post</a> by <strong><a href="http://forum.synology.com/enu/memberlist.php?mode=viewprofile&amp;u=118232">vibrati
 onbaby</a></strong></p>
 
@@ -220,64 +72,59 @@ onbaby</a></strong></p>
 <li><p>then it should work after restart the VPN Server through DSM web interface.</p></li>
 </ol>
 
+    </article>
 
     
-    
-        <div class="chevrons">
-    <div id="navigation">
-<a class="nav nav-prev" href="/blogger/disable-datetime-sync-between-virtualbox-client-and-host/" title="Disable date/time sync between VirtualBox client and host"> <i class="fa fa-chevron-left"></i><label>Disable date/time sync between VirtualBox client and host</label></a>
-    <a class="nav nav-next" href="/blogger/add-dynu.com-to-ddns-list-on-synology-nas/" title="add Dynu.com to DDNS list on Synology NAS" style="margin-right: 0px;"><label>add Dynu.com to DDNS list on Synology NAS</label><i class="fa fa-chevron-right"></i></a></div>
+<ul class="article-share">
+  <li>
+    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </li>
+  <li>
+    <div class="fb-share-button" data-href="http://example.org/blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </li>
+  <li>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <g:plus action="share"></g:plus>
+  </li>
+  <li>
+    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="en" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  </li>
+  <li>
+    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+    <script>!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+  </li>
+</ul>
+
+    <ul class="pager article-pager">
+      <li class="pager-newer">
+          <a href="/blogger/disable-datetime-sync-between-virtualbox-client-and-host/" data-toggle="tooltip" data-placement="top" title="Disable date/time sync between VirtualBox client and host">&lt; Newer</a>
+      </li>
+      <li class="pager-older">
+        <a href="/blogger/add-dynu.com-to-ddns-list-on-synology-nas/" data-toggle="tooltip" data-placement="top" title="add Dynu.com to DDNS list on Synology NAS">Older &gt;</a>
+      </li>
+    </ul>
   </div>
 
-  </section>
-</article>
 
-<footer>
-
-<div class="footline">
-    
-
-    
-
-  
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 28/07/2015
-    </div>
-    
-
-    <div class="github-link">
-      <a href="blogger/connect-to-local-area-network-through-pptp-vpn-synology-dsm.md" target="blank"><i class="fa fa-code-fork"></i>
-        Improve this page</a>
-    </div>
+<div class="site-footer">
+  <div class="copyright"></div>
+  <ul class="site-footer-items">
+  </ul>
+  <div class="powerdby">
+    Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/taikii/whiteplain">Whiteplain</a>
   </div>
+</div>
+<script src="/js/script.js"></script>
+<script src="/js/custom.js"></script>
 
 
-	<div>
-
-
-  
-    Create a content/_footer.md file to customize the footer content
-  
-
-
-
-	</div>
-</footer>
-
-<script src="/js/clipboard.min.js"></script>
-
-<link href="/css/featherlight.min.css" rel="stylesheet">
-<script src="/js/featherlight.min.js"></script>
-
-
-
-<script src="/theme-flex/script.js"></script>
-
-    
-
-    
-    
-
-    
-  </body>
+</body>
 </html>
